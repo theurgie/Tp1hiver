@@ -1,0 +1,35 @@
+
+package modele;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/**
+ *Class ListeDesMembres contien le methodes pour notre liste
+ * 
+ * @author Dominick Lapointe
+ */
+public class ListeDesMembres {
+
+    static ArrayList<Membres> liste = new ArrayList<Membres>();
+
+    public ListeDesMembres() {
+    }
+
+    public static void ajouterMembres(Membres out) {
+        liste.add(out);
+    }
+
+    public static ArrayList getListeMembres() {
+        return liste;
+    }
+
+    public static void listerMembres() {
+
+        Iterator iterateur = liste.iterator();
+
+        while (iterateur.hasNext()) {
+            System.out.println((Membres) iterateur.next());
+        }
+    }
+}
