@@ -1,0 +1,43 @@
+package modele;
+
+import java.util.ArrayList;
+import javax.swing.table.AbstractTableModel;
+
+/**
+ *Class TableMembres et le constructeur pour notre table 
+ * 
+ * @author Dominick Lapointe
+ */
+public class TableMembres extends AbstractTableModel {
+
+    private ArrayList<Membres> liste;
+    private String[] columnNames = {"Code", "Nom", "Prenom"};
+
+    public TableMembres(ArrayList<Membres> liste) {
+        this.liste = liste;
+    }
+
+    public String getColumnName(int column) {
+        return columnNames[column];
+    }
+
+    public int getColumnCount() {
+        return columnNames.length;
+    }
+
+    public int getRowCount() {
+        return liste.size();
+    }
+
+    public Object getValueAt(int rowIndex, int columnIndex) {
+
+        if (columnIndex == 0) {
+            return liste.get(rowIndex).getCode();
+        } else if (columnIndex == 1) {
+            return liste.get(rowIndex).getNom();
+        } else if (columnIndex == 2) {
+            return liste.get(rowIndex).getPrenom();
+        }
+        return null;
+    }
+}
