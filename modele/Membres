@@ -1,0 +1,93 @@
+
+package modele;
+
+import java.io.Serializable;
+
+/**
+ *Class Membres et le constructeur pour nos membres
+ * 
+ * 
+ * @author Dominick Lapointe
+ */
+public class Membres implements Serializable {
+
+    private static int codeInt = 10;
+    private String nom, prenom, adresse, statut;
+    private double revenue_annuel;
+    private int code;
+
+    // constructeur
+    public Membres(String nom, String prenom, String adresse, String statut, double revenue_annuel) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adresse = adresse;
+        this.statut = statut;
+        this.revenue_annuel = revenue_annuel;
+    }
+
+    // getter
+    public static int getCodeInt() {
+        return codeInt;
+    }
+
+    public Membres(int code, String nom, String prenom) {
+        this.code = code;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public double getRevenue_annuel() {
+        return revenue_annuel;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    // setter
+    public static void setCodeInt(int codeInt) {
+        Membres.codeInt = codeInt;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
+    }
+
+    public void setRevenue_annuel(double revenue_annuel) {
+        this.revenue_annuel = revenue_annuel;
+    }
+
+    @Override
+    public String toString() {
+        return "membres {" + "nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse
+                + ", statut=" + statut + ", revenue_annuel=" + revenue_annuel + ", code=" + code + '}';
+    }
+}
