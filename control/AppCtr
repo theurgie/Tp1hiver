@@ -1,0 +1,31 @@
+
+package control;
+
+import util.ConfigDB;
+import vue.GuiMenuPrincipale;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import modele.ListeDesMembres;
+import vue.GuiMenuPrincipale;
+
+/**
+ *Class AppCtr demmare notre application
+ * 
+ * @author Dominick Lapointe
+ */
+public class AppCtr {
+
+    //declaration des variables
+    private static ListeDesMembres ListeDesMembres;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+
+        new GuiMenuPrincipale().setVisible(true);
+
+    }
+}
